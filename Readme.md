@@ -1,4 +1,5 @@
 # __PROYECTO INDIVIDUAL 02__
+## Machine Learning
 <img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/11/scikit-learn-using-python.png" width="500px">
 
 ### Introducción
