@@ -48,7 +48,7 @@ Con el modelo entrenado, se realiza la predicción del feature, y se lo exporta 
 Luego de realizar varias pruebas, con diferentes métodos (dummies, OHE, LE, ORE), este modelo fue el que mejor accuracy y recall tuvo, sin tener overfitting.  
 Muchas de las columnas tenían una relación con la estadía, como se vió con el P_valor, pero el resultado solo mejora un poco a comparación de realizar el árbol con sólo 3 features. Esto se ve muchísimo en el gráfico que mide el peso de las mismas.
 Al recibir el feedback del modelo, los valores logrados de las métricas son:
-+ Accuracy: 0.7512
-+ Recall:   0.7847
++ Accuracy: 0.7629
++ Recall:   0.8102
 
 ¡Muchas gracias por llegar hasta aquí!
