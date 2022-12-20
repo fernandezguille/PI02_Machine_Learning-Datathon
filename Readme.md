@@ -1,15 +1,33 @@
-# __PROYECTO INDIVIDUAL 02__
-## Machine Learning
-<img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/11/scikit-learn-using-python.png" width="500px">
+<h1 align=center> PROYECTO INDIVIDUAL 02 </h1>
+<h2 align=center> Machine Learning en Datasets sobre hospitalizaciones</h2>
 
-### Introducción
+<br>
 
-Éste el el segundo proyecto individual, que forma parte de la formación práctica del bootcamp de Data Science de Henry. El mismo consiste en cargar un dataset sobre hospitalizaciones, separado en dos. Mediante la exploración y el entrenamiento de un Modelo de Machine Learning, se debe predecir si los pacientes pasarán más de 8 días hospitalizados, entrenandolo con una parte del dataset que tiene los resultados, y la otra parte que no lo tiene.
-Para averiguar si el modelo tiene buenos resultados, se ha habilitado un Dashboard.
+¡Hola! Mi nombre es *Guillermo Fernández* y éste mi segundo proyecto individual, que forma parte de la formación práctica del bootcamp de Data Science de la academia Henry. 
+<img alt="ML" src="https://user-images.githubusercontent.com/110403753/208594890-3a68320a-d9ee-4f9b-8f96-cdf8048313dc.png" width="400px" align="center">
+<hr>
+
+## Objetivo
+Cargar un dataset sobre hospitalizaciones. Mediante la exploración y el entrenamiento de un Modelo de Machine Learning, se debe predecir si los pacientes pasarán más de 8 días hospitalizados, entrenandolo con la parte del dataset que tiene los resultados, y usando eso como referencia para la otra parte que no lo tiene.
 
 [Consigna completa del PI](https://github.com/soyHenry/Datathon)
 
-## Pasos para realizar el proyecto:
+### Contexto
+Es muy importante para el funcionamiento del hospital/clínica, conocer si un paciente tendrá una internación prolongada. Para este trabajo, se utilizó un dataset que estaba fraccionado, y una parte no tenía el tiempo de internación.
+
+### Tecnologías utilizadas
+* [Python](https://docs.python.org/3/)
+    * [Pandas](https://pandas.pydata.org/)
+    * [Numpy](https://numpy.org)
+    * [sklearn](https://scikit-learn.org/stable/index.html)
+    * [scipy](https://scipy.org)
+    * [joblib](https://joblib.readthedocs.io/en/latest/)
+    * [Seaborn](https://seaborn.pydata.org)
+    * [Matplotlib](https://matplotlib.org)
+
+<hr>
+
+## Plan de trabajo:
 1. EDA (Exploratory data analysis)
 2. Preprocesamiento de datos
 3. Análisis de correlación
@@ -17,39 +35,44 @@ Para averiguar si el modelo tiene buenos resultados, se ha habilitado un Dashboa
 5. Pipeline
 6. Creación del modelo
 7. Predicción
-8. Conclusiones finales
 
-## Archivos del repositorio
+### Archivos del repositorio
 Los archivos raw utilizados para realizar el proyecto se encuentran dentro de la carpeta Datasets, y también el archivo que se creó con los resultados de la predicción. El nombre de las predicciones coincide con el usuario de GitHub.  
-Modelo ML.ipynb es el archivo en donde se realizan todos los pasos mencionados.
+Modelo ML.ipynb es el archivo en donde se realiza el plan mencionado.
+Mejor_pipeline.pkl es donde se guarda el pipeline con mejor accuracy, para evitar correr nuevamente todos los entrenamientos.
 
 ## EDA
 Para el primer paso, se realiza el EDA. Se exploraron los datasets, revisando tipos de datos y faltantes. En base a este análisis, se obtienen algunas conclusiones iniciales.
 
 ## Preprocesamiento de datos
-Se crea el feature de relevancia, se eliminan duplicados.
+Debido a que la feature relevante es una variable categórica, no sirve el análisis de correlación numérica, por lo que se utiliza análisis estadístico.
 
 ## Análisis de correlación
-Con la ayuda de las librerías de Python, se obtiene el P valor de las variables categóricas, para evaluar la correlación
+Con la ayuda de las librerías de Python, se obtiene el P valor de las variables categóricas, para evaluar la correlación.
 
 ## Tratamiento de features
-Se eliminan las features irrelevantes, y se realiza la recategorización mediante OrdinalEncoder y OneHotEncoder
+Se eliminan las features irrelevantes, y se realiza la recategorización mediante OrdinalEncoder y OneHotEncoder.
 
 ## Pipeline
 Se utiliza Pipeline para entrenar múltiples modelos, y poder evaluar cuál es el que otorga mejor precisión. Como es un proceso que demora mucho tiempo, el resultado lo guardamos en un archivo para luego importarlo.
 
 ## Modelo
-Se selecciona el modelo de árbol de desición, de acuerdo al resultado del Pipeline. Utilizando CV y un bucle, se obtiene la profundidad óptima del árbol. Se entrena el modelo con train_test_split. Luego, comparamos los resultados obtenidos con el evaluado en el Pipeline, y nos quedamos con el más equilibrado.  
+Se selecciona el modelo de árbol de desición, de acuerdo al resultado del Pipeline. Utilizando Cross Validate y un bucle, se obtiene la profundidad óptima del árbol. Se entrena el modelo con train_test_split. Luego, comparamos los resultados obtenidos con el evaluado en el Pipeline, y nos quedamos con el más equilibrado.  
 <img src="https://static.vecteezy.com/system/resources/previews/001/234/042/original/decision-tree-design-vector.jpg" width="200px">
 
 ## Predicción
 Con el modelo entrenado, se realiza la predicción del feature, y se lo exporta a un archivo para su posterior evaluación.
 
-## Conclusiones finales
+<hr>
+
+## Conclusión
 Luego de realizar varias pruebas, con diferentes métodos (dummies, OHE, LE, ORE), este modelo fue el que mejor accuracy y recall tuvo, sin tener overfitting.  
-Muchas de las columnas tenían una relación con la estadía, como se vió con el P_valor, pero el resultado solo mejora un poco a comparación de realizar el árbol con sólo 3 features. Esto se ve muchísimo en el gráfico que mide el peso de las mismas.
+Muchas de las columnas tenían una relación con la estadía, como se vió con el P_valor, pero el resultado solo mejora un poco a comparación de realizar el árbol con sólo 3 features. Esto se observa en el gráfico que mide el peso de las mismas.
 Al recibir el feedback del modelo, los valores logrados de las métricas son:
 + Accuracy: 0.7629
 + Recall:   0.8102
+
+Les dejo mi contacto:  
+<a href="https://www.linkedin.com/in/fernandezguillermo"><img alt="Linkedin" title="Connect with me" src="https://img.shields.io/badge/Linkedin-0077B5?style=flat&logo=linkedin&logoColor=white"></a>  
 
 ¡Muchas gracias por llegar hasta aquí!
