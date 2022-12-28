@@ -4,7 +4,7 @@
 <br>
 
 ¡Hola! Mi nombre es *Guillermo Fernández* y éste mi segundo proyecto individual, que forma parte de la formación práctica del bootcamp de Data Science de la academia Henry. 
-<img alt="ML" src="https://user-images.githubusercontent.com/110403753/208594890-3a68320a-d9ee-4f9b-8f96-cdf8048313dc.png" width="400px" align="center">
+
 <hr>
 
 ## Objetivo
@@ -14,6 +14,8 @@ Cargar un dataset sobre hospitalizaciones. Mediante la exploración y el entrena
 
 ### Contexto
 Es muy importante para el funcionamiento del hospital/clínica, conocer si un paciente tendrá una internación prolongada. Para este trabajo, se utilizó un dataset que estaba fraccionado, y una parte no tenía el tiempo de internación.
+
+<p align="center"> <img alt="ML" src="https://user-images.githubusercontent.com/110403753/208594890-3a68320a-d9ee-4f9b-8f96-cdf8048313dc.png" height=200px> <img src="https://thehill.com/wp-content/uploads/sites/2/2021/11/ca_coronavirusus_013020istock_25.jpg?strip=1" height=200px></p>
 
 ### Tecnologías utilizadas
 * [Python](https://docs.python.org/3/)
@@ -37,11 +39,12 @@ Es muy importante para el funcionamiento del hospital/clínica, conocer si un pa
 7. Predicción
 
 ### Archivos del repositorio
-Los archivos raw utilizados para realizar el proyecto se encuentran dentro de la carpeta Datasets, y también el archivo que se creó con los resultados de la predicción. El nombre de las predicciones coincide con el usuario de GitHub.  
-Modelo ML.ipynb es el archivo en donde se realiza el plan mencionado.
-Mejor_pipeline.pkl es donde se guarda el pipeline con mejor accuracy, para evitar correr nuevamente todos los entrenamientos.
+- [**Datasets**:](./Datasets/) En esta carpeta se encuentran los archivos raw utilizados para realizar el proyecto, y también el archivo que se creó con los resultados de la predicción. El nombre de éste coincide con el usuario de GitHub.  
+- [**Mejor_pipeline**:](./Mejor_pipeline.pkl) En este archivo se guarda el pipeline con mejor accuracy, para evitar correr nuevamente todos los entrenamientos.
+- [**Modelado**:](./Modelado.ipynb) Notebook donde se realiza el trabajo.
 
-## EDA
+
+## EDA <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width=40px height=40px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" width=40px height=40px/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width=40px height=40px/>
 Para el primer paso, se realiza el EDA. Se exploraron los datasets, revisando tipos de datos y faltantes. En base a este análisis, se obtienen algunas conclusiones iniciales.
 
 ## Preprocesamiento de datos
@@ -58,7 +61,7 @@ Se utiliza Pipeline para entrenar múltiples modelos, y poder evaluar cuál es e
 
 ## Modelo
 Se selecciona el modelo de árbol de desición, de acuerdo al resultado del Pipeline. Utilizando Cross Validate y un bucle, se obtiene la profundidad óptima del árbol. Se entrena el modelo con train_test_split. Luego, comparamos los resultados obtenidos con el evaluado en el Pipeline, y nos quedamos con el más equilibrado.  
-<img src="https://static.vecteezy.com/system/resources/previews/001/234/042/original/decision-tree-design-vector.jpg" width="200px">
+<p align="center"> <img src="https://static.vecteezy.com/system/resources/previews/001/234/042/original/decision-tree-design-vector.jpg" width="200px"> </p>
 
 ## Predicción
 Con el modelo entrenado, se realiza la predicción del feature, y se lo exporta a un archivo para su posterior evaluación.
